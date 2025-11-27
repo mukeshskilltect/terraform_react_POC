@@ -1,0 +1,71 @@
+{
+  "terraform": {
+    "required_providers": {
+      "google": {
+        "source": "hashicorp/google",
+        "version": "~> 4.0"
+      }
+    }
+  },
+  "provider": {
+    "google": {
+      "project": "my-project-id",
+      "region": "us-central1"
+    }
+  },
+  "resource": {
+    "google_compute_instance": {
+      "compute_3": {
+        "name": "compute-instance-3",
+        "zone": "us-central1-a",
+        "machine_type": "e2-micro",
+        "boot_disk": {
+          "initialize_params": {
+            "image": "debian-cloud/debian-11"
+          }
+        },
+        "network_interface": [
+          {
+            "network": "default",
+            "access_config": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    "inputs": {
+      "project": "p1",
+      "instanceName": null,
+      "region": null,
+      "zone": null,
+      "machineFamily": null,
+      "machineType": null,
+      "bootDiskType": null,
+      "bootDiskSize": null,
+      "imageOs": null,
+      "network": null,
+      "subnetwork": null,
+      "externalIp": null,
+      "firewallRules": null,
+      "serviceAccount": null,
+      "iamScopes": null,
+      "sshKey": null,
+      "labels": null,
+      "tags": null
+    },
+    "google_cloudfunctions_function": {
+      "functions_2": {
+        "name": "ww",
+        "runtime": "go",
+        "entry_point": "asx",
+        "region": "asia-northeast2",
+        "available_memory_mb": 2,
+        "timeout": "12s",
+        "event_trigger": {
+          "event_type": "providers/cloud.pubsub/eventTypes/topic.publish"
+        }
+      }
+    }
+  }
+}
