@@ -1,0 +1,32 @@
+{
+  "id": 196,
+  "name": "nakshtra_test_1",
+  "description": "nakshtra_test_1",
+  "provider": "aws",
+  "region": "us-east-1",
+  "createdAt": "2025-11-21T12:28:07.880Z",
+  "components": [
+    {
+      "id": "s3-1763728068230",
+      "data": {
+        "name": "S3-m7viz1",
+        "type": "s3",
+        "config": {
+          "awsRegion": "us-east-1",
+          "bucketName": "test",
+          "versioning": "Disabled",
+          "accessControlList": "public-read-write"
+        },
+        "componentType": "s3",
+        "requiredFields": [],
+        "validationError": false
+      },
+      "type": "cloudComponent",
+      "position": {
+        "x": 342.5833435058594,
+        "y": 297.2222137451172
+      }
+    }
+  ],
+  "connections": []
+}
