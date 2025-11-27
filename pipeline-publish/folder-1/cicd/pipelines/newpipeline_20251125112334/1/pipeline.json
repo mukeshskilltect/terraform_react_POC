@@ -1,0 +1,89 @@
+{
+  "id": 202,
+  "name": "newPipeline_20251125112334",
+  "description": "",
+  "provider": "gcp",
+  "region": "us-east-1",
+  "createdAt": "2025-11-25T11:40:38.018Z",
+  "components": [
+    {
+      "id": "gcp-compute-1764069905645",
+      "data": {
+        "name": "GCP-COMPUTE-5nqb9i",
+        "type": "gcp-compute",
+        "config": {
+          "zone": "asia-south1-b",
+          "region": "asia-northeast1",
+          "imageOs": "centos",
+          "network": "n1",
+          "project": "pq",
+          "subnetwork": "subnet-1",
+          "machineType": "e2-standard-2",
+          "bootDiskSize": 50,
+          "bootDiskType": "pd-balanced",
+          "instanceName": "q",
+          "machineFamily": "Compute Optimized"
+        },
+        "componentType": "gcp-compute",
+        "requiredFields": [],
+        "validationError": false
+      },
+      "type": "cloudComponent",
+      "position": {
+        "x": 27.75,
+        "y": 91.99998474121094
+      }
+    },
+    {
+      "id": "gcp-functions-1764069991944",
+      "data": {
+        "name": "GCP-FUNCTIONS-34xt91",
+        "type": "gcp-functions",
+        "config": {
+          "region": "asia-northeast2",
+          "project": "p1qq",
+          "runtime": "go",
+          "timeout": 12,
+          "entryPoint": "asx",
+          "sourceCode": "repo",
+          "triggerType": "pubsub",
+          "functionName": "ww",
+          "memoryAllocation": "2GB"
+        },
+        "componentType": "gcp-functions",
+        "requiredFields": [],
+        "validationError": false
+      },
+      "type": "cloudComponent",
+      "position": {
+        "x": 70.98109649537332,
+        "y": 315.1076905055453
+      }
+    },
+    {
+      "id": "gcp-compute-1764070739534",
+      "data": {
+        "name": "GCP-COMPUTE-d1r16e",
+        "type": "gcp-compute",
+        "config": {
+          "project": "p1"
+        },
+        "componentType": "gcp-compute",
+        "requiredFields": [],
+        "validationError": false
+      },
+      "type": "cloudComponent",
+      "position": {
+        "x": -121.41665017254135,
+        "y": 223.0317300931712
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "reactflow__edge-gcp-compute-1764069905645-gcp-functions-1764069991944",
+      "source": "gcp-compute-1764069905645",
+      "target": "gcp-functions-1764069991944"
+    }
+  ]
+}
